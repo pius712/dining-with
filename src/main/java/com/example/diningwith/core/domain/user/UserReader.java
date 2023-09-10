@@ -5,21 +5,18 @@ import com.example.diningwith.core.storage.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 @RequiredArgsConstructor
-public class UserWriter {
-
+public class UserReader {
     private final UserRepository userRepository;
 
-    public User write(CreateUserRequest createUserRequest) {
-        UserEntity userEntity = userRepository.save(
-                new UserEntity(
-                        createUserRequest.id(),
-                        createUserRequest.password()
-                )
-        );
-        return toUser(userEntity);
+
+    public List<User> readAll() {
+        return userRepository.findAll().stream().map(this::toUser).toList();
     }
+
 
     private User toUser(UserEntity userEntity) {
         return new User(
