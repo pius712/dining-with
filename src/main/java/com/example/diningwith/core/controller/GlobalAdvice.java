@@ -1,7 +1,7 @@
 package com.example.diningwith.core.controller;
 
-import com.example.boilerplate.core.support.error.GlobalExceptionType;
-import com.example.boilerplate.core.support.response.ApiResponse;
+import com.example.diningwith.core.support.error.GlobalExceptionType;
+import com.example.diningwith.core.support.response.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -1,7 +1,7 @@
 package com.example.diningwith.core.support.response;
 
-import com.example.boilerplate.core.support.error.ErrorInfo;
-import com.example.boilerplate.core.support.error.ExceptionType;
+import com.example.diningwith.core.support.error.ErrorInfo;
+import com.example.diningwith.core.support.error.ExceptionType;
 
 public record ApiResponse<T>(ResultType result, T data, ErrorInfo error) {
 

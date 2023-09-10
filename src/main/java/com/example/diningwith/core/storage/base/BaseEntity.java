@@ -8,8 +8,8 @@ import lombok.Getter;
 
 @MappedSuperclass
 @Getter
-public class BaseEntity {
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public abstract class BaseEntity {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     Long id;
 

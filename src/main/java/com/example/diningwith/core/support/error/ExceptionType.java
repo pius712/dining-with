@@ -11,8 +11,4 @@ public interface ExceptionType {
     String getErrorMessage();
 
     LogLevel getLogLevel();
-//    HttpStatus status;
-//    ErrorCode errorCode;
-//    String errorMessage;
-//    LogLevel logLevel;
 }
