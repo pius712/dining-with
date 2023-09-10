@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class ProfileService {
+public class ProfileQueryService {
 
     private final ProfileWriter profileWriter;
     private final ProfileReader profileReader;
@@ -15,6 +15,7 @@ public class ProfileService {
     }
 
     public Profile readProfile(Long userId) {
+
         return profileReader.readByUserId(userId);
     }
 }
