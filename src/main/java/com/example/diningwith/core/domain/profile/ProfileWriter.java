@@ -11,7 +11,7 @@ public class ProfileWriter {
 
     private final ProfileRepository profileRepository;
 
-    public Profile write(Long userId, CreateProfileRequest createProfileRequest) {
+    public Profile write(Long userId, RegisterProfileRequest createProfileRequest) {
         ProfileEntity entity = profileRepository.save(
                 new ProfileEntity(
                         userId,
@@ -24,6 +24,9 @@ public class ProfileWriter {
 
 
     private Profile toProfile(ProfileEntity profileEntity) {
-        return new Profile(profileEntity.getNickname(), profileEntity.getBio())
+        return new Profile(
+                profileEntity.getId(),
+                profileEntity.getUserId(),
+                profileEntity.getNickname(), profileEntity.getBio());
     }
 }

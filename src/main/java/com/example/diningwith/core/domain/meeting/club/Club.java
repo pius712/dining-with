@@ -1,22 +1,18 @@
 package com.example.diningwith.core.domain.meeting.club;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
 import java.util.List;
 
-@AllArgsConstructor
-@NoArgsConstructor
-public class Club {
+public record Club(
+        Long id,
+        String name,
+        String description,
 
-    private final Long id;
-    private final String name;
-    private final String description;
+        ClubHost clubHost,
+        List<ClubParticipant> clubParticipants,
 
-    private final ClubHost clubHost;
-    private final List<ClubParticipant> clubParticipants;
+        Long limit
+) {
 
-    private final Long limit;
 
 }
 

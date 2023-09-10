@@ -15,8 +15,8 @@ public class ClubService {
 //        clubWriter.w
 //    }
 
-    public Club createClub(CreateClubRequest createClubRequest) {
-        return new Club();
+    public void createClub(CreateClubRequest createClubRequest) {
+//        return new Club();
     }
 
     public Club getClub(Long clubId) {

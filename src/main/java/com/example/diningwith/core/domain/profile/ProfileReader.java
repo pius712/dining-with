@@ -20,6 +20,7 @@ public class ProfileReader {
     private Profile toProfile(ProfileEntity profileEntity) {
         return new Profile(
                 profileEntity.getId(),
+                profileEntity.getUserId(),
                 profileEntity.getNickname(),
                 profileEntity.getBio()
         );

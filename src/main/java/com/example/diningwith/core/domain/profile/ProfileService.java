@@ -10,7 +10,7 @@ public class ProfileService {
     private final ProfileWriter profileWriter;
     private final ProfileReader profileReader;
 
-    public Profile makeProfile(Long userId, CreateProfileRequest createProfileRequest) {
+    public Profile makeProfile(Long userId, RegisterProfileRequest createProfileRequest) {
         return profileWriter.write(userId, createProfileRequest);
     }
 
